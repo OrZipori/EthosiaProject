@@ -1,0 +1,19 @@
+<div>
+  <h2>Details :</h2>
+  <hr>
+  <app-loader *ngIf=isLoading></app-loader>
+  <ul id="userList" [class.display]="showList">
+    <li class="header">First name:</li>
+    <li>{{ this.user.firstName}}</li>
+    <li class="header">Last name:</li>
+    <li>{{ this.user.lastName}}</li>
+    <li class="header">Email:</li>
+    <li>{{ this.user.email}}</li>
+    <li class="header">Headline:</li>
+    <li>{{ this.user.headline}}</li>
+    <li class="header">Cellphone:</li>
+    <li>{{ this.user.cellphone}}</li>
+  </ul>
+  <div class="clear"></div>
+  <a (click)="logout()" id="logout" class="button">Logout</a>
+</div>

@@ -1,0 +1,20 @@
+<div>
+  <hr>
+  <app-loader *ngIf=isLoading></app-loader>
+  <div [class.display]="showReg" id="register">
+    <form #data="ngForm" (ngSubmit)="onSubmit(data)">
+      <label>First Name:</label>
+      <input class="textInput" type="text" name="fName" [(ngModel)]="this.user.firstName" required/>
+      <label>Last Name:</label>
+      <input class="textInput" type="text" name="lName" [(ngModel)]="this.user.lastName" required/>
+      <label>Email: </label>
+      <input class="textInput" type="email" name="email" [(ngModel)]="this.user.email" required/>
+      <label>Headline:</label>
+      <input class="textInput" type="text" name="headline" [(ngModel)]="this.user.headline" required/>
+      <label>Cellphone:</label>
+      <input class="textInput" type="tel" name="cellphone" ngModel required/>
+      <input type="submit" value="Register !" />
+      <input type="reset" value="Reset" />
+    </form>
+  </div>
+</div>
